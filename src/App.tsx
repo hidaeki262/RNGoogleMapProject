@@ -1,30 +1,20 @@
-import React, { SafeAreaView, StyleSheet, Text } from 'react-native';
+import React from 'react-native';
+import 'react-native-gesture-handler';
+import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
-import AutocompleteInput from './components/AutocompleteInput';
-import Map from './components/Map';
+import Navigation from './Navigation';
 import store from './redux/store';
+
+enableScreens()
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Provider store={store}>
-        <Text style={styles.text}>Map directory</Text>
-        <AutocompleteInput />
-        <Map />
-      </Provider>
-    </SafeAreaView>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: '600',
-    paddingLeft: 10,
-  }
-});
+
 
 export default App;
