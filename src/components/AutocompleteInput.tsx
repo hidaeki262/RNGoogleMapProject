@@ -1,4 +1,4 @@
-import React, { View } from 'react-native';
+import React from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { connect } from 'react-redux';
 import { setSearchResult } from '../redux/actions/searchActions';

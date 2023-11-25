@@ -1,6 +1,6 @@
-import React, { StyleSheet, View } from 'react-native';
-import { connect } from 'react-redux';
+import React, { StyleSheet } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
+import { connect } from 'react-redux';
 import { MalaysiaStatesData } from './AutocompleteInput';
 
 interface MapProps {
